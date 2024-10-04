@@ -2,19 +2,49 @@
 //
 
 #include <iostream>
+#include <cmath>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int choice;
+	while (true)
+	{
+		cout << "[1] Compute the area of a circle" << endl;
+		cout << "[2] Compute the area of a rectangle" << endl;
+		cout << "[3] Compute the area of a triangle" << endl;
+		cout << "[4] Exit" << endl;
+		cout << "Please enter the number of your choice." << endl;
+		cin >> choice;
+		switch (choice)
+			case 1:
+				double radius;
+				double area;
+				cout << "What is the radius of the circle?" << endl;
+				cin >> radius;
+				area = pow(radius, 2) * M_PI;
+			case 2:
+				double width;
+				double length;
+				// ask for info
+				area = width * length;
+			case 3:
+				double width;
+				double length;
+				// ask info
+				area = (width * length) * .5;
+			case 4:
+				break;
+			default:
+				cout << "Please make a valid choice." << endl;
+
+
+
+	}
+
+
+
+
+	return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

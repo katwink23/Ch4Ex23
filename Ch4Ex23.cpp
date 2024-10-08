@@ -1,5 +1,11 @@
-// Ch4Ex23.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+File Name: Ch4Ex23.cpp
+Programmer: Katlyn Winkelhake
+Date: 10/7/2024
+Requirements:
+A menu that user can choose what they want to calculate.
+Make it so numbers can only be positive.
+*/
 
 #include <iostream>
 #include <cmath>

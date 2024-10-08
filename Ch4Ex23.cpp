@@ -3,10 +3,21 @@
 
 #include <iostream>
 #include <cmath>
+#include <string>
 using namespace std;
+
+const double PI = 3.14159;
 
 int main()
 {
+	double radius;
+	double area;
+	double width1;
+	double length1;
+	double base;
+	double height;
+	double area2;
+	double area3;
 	int choice;
 	while (true)
 	{
@@ -17,27 +28,59 @@ int main()
 		cout << "Please enter the number of your choice." << endl;
 		cin >> choice;
 		switch (choice)
-			case 1:
-				double radius;
-				double area;
-				cout << "What is the radius of the circle?" << endl;
-				cin >> radius;
-				area = pow(radius, 2) * M_PI;
-			case 2:
-				double width;
-				double length;
-				// ask for info
-				area = width * length;
-			case 3:
-				double width;
-				double length;
-				// ask info
-				area = (width * length) * .5;
-			case 4:
-				break;
-			default:
-				cout << "Please make a valid choice." << endl;
+		{
+		case 1:
+			cout << "What is the radius of the circle?" << endl;
+			cin >> radius;
+			area = PI * pow(radius, 2);
+			
+			if (radius < 0)
+				cout << "Please input a positive number." << endl; 
+			else 
+				cout << "The circle has an area of " << area << endl;
+			break;
+		case 2:
+			cout << "What is the length?" << endl;
+			cin >> length1;
+			
+			if (length1 > 0)
+			{
+				cout << "What is the width?" << endl;
+				cin >> width1;
 
+				if (width1 > 0) {
+					area2 = width1 * length1;
+					cout << "The rectangle has an area of " << area2 << endl;
+				}
+				else {
+					cout << "Please input a positive number." << endl;
+				}
+			}
+			break;
+		case 3:
+			cout << "What is the height?" << endl;
+			cin >> height;
+			
+			if (height > 0)
+			{
+				cout << "What is the base?" << endl;
+				cin >> base;
+
+				if (base > 0) {
+					area3 = (height * base) * .5;
+					cout << "The triangle has an area of " << area3 << endl;
+				}
+				else {
+					cout << "Please input a positive number." << endl;
+				}
+			}
+			break;
+		case 4:
+			cout << "lol bye" << endl;
+			break;
+		default:
+			cout << "Please make a valid choice." << endl;
+		}
 
 
 	}
